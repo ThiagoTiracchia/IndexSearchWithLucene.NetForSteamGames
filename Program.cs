@@ -16,6 +16,7 @@ class Program
 {
     static void Main()
     {
+        Console.WriteLine("Waiting for the json to be parsed");
         var SteamFileText = File.ReadAllText("C:\\Users\\thiag\\source\\repos\\IndexSearch\\steamGames.json");
         var values = JObject.Parse(SteamFileText).SelectToken("applist").SelectToken("apps");
         var averdevuelta = values.ToString();
